@@ -1,0 +1,172 @@
+/* css/0-positioning.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #03F5F3;
+    font-family: 'Questrial', sans-serif;
+    text-align: center;
+    
+}
+
+body:before, body:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    content: " ";
+    height: 200px;
+    background-repeat: repeat-x;
+    
+}
+
+body:before {
+    top: 0;
+    bottom: -50px;
+    background: 
+    radial-gradient(circle at 50% 0%, #966B87 25%, #22dddb 26%, #03F5F3 32%);
+    background-size: 100px 200px;
+}
+
+body:after {
+    bottom: 0px;
+    background: 
+    radial-gradient(circle at 50% 100%, #966B87 25%, #22dddb 26%, #03F5F3 32%);
+    background-color: #966B87;
+    background-size:100px 200px;
+}
+
+h1 {
+    margin-top: 0.25em;
+    font-size: 5em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+svg {
+    background: transparent;
+}
+
+.object {
+    color: #bbbbbb;
+    background-color: pink;
+    width: 40vw;
+    height: 40vh;
+    position: absolute;
+    border: 15px solid #B9FF9B;
+    left: 30vw;
+    top: 30vh;
+    border-radius: 40px;
+    box-shadow: 10px 11px 5px #966B87;
+    transform: skewX(-11deg);
+    color: white;
+}
+
+.object > h1, .object > h2 {
+    background-color: transparent;
+}
+
+#T, #a, #b, #r, #i, #s {
+
+    stroke: rgba(5, 75, 106, 0.78);
+    stroke-width: 1;
+    fill: rgba(5, 75, 106, 0.78);
+    stroke-linejoin: round;
+    stroke-linecap: round; 
+    
+}
+
+#T {
+    fill-opacity: 0;
+    stroke-dasharray: 148px; 
+    stroke-dashoffset: -148px;
+    animation: T-anim .75s linear 0s forwards, fade-stroke 2s linear 4.75s forwards, fill-in 2s linear 4.75s forwards; 
+
+}
+
+#a {
+    fill-opacity: 0;
+    stroke-dasharray: 145px; 
+    stroke-dashoffset: -145px;
+    animation: a-anim .75s linear .80s forwards, fade-stroke 2s linear 4.75s forwards, fill-in 2s linear 4.75s forwards;
+}
+
+#b {
+    fill-opacity: 0;
+    stroke-dasharray: 141px; 
+    stroke-dashoffset: -141px;
+    animation: a-anim .75s linear 1.60s forwards,fade-stroke 2s linear 4.75s forwards, fill-in 2s linear 4.75s forwards;
+
+}
+
+#r {
+    fill-opacity: 0;
+    stroke-dasharray: 190px; 
+    stroke-dashoffset: -190px;
+    animation: r-anim .75s linear 2.4s forwards, fade-stroke 2s linear 4.75s forwards, fill-in 2s linear 4.75s forwards;
+
+}
+
+#i {
+    fill-opacity: 0;
+    stroke-dasharray: 100px; 
+    stroke-dashoffset: -100px;
+    animation: i-anim .75s linear 3.20s forwards, fade-stroke 2s linear 4.75s forwards, fill-in 2s linear 4.75s forwards;
+}
+
+#s {
+    fill-opacity: 0;
+    stroke-dasharray: 122px; 
+    stroke-dashoffset: -122px;
+    animation: s-anim .75s linear 4.00s forwards, fade-stroke 2s linear 4.75s forwards, fill-in 2s linear 4.75s forwards;
+}
+
+@keyframes T-anim {
+    from {stroke-dashoffset: -148px}
+    to {stroke-dashoffset: 0px;}
+}
+
+@keyframes a-anim {
+    from {stroke-dashoffset: -145px}
+    to {stroke-dashoffset: 0px;}
+}
+
+@keyframes b-anim {
+    from {stroke-dashoffset: -141px}
+    to {stroke-dashoffset: 0px;}
+}
+
+@keyframes r-anim {
+    from {stroke-dashoffset: -190px}
+    to {stroke-dashoffset: 0px;}
+}
+
+@keyframes i-anim {
+    from {stroke-dashoffset: -100px}
+    to {stroke-dashoffset: 0px;}
+}
+
+@keyframes s-anim {
+    from {stroke-dashoffset: -122px}
+    to {stroke-dashoffset: 0px;}
+}
+
+@keyframes fade-stroke {
+  to { stroke-opacity: 0; }
+}
+
+@keyframes fill-in {
+  from { fill-opacity: 0; }
+  to { fill-opacity: 1; }
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
