@@ -1,0 +1,70 @@
+/* css/0-positioning.css */
+
+@font-face {
+  font-family: Mantra;
+  src: url(../assets/fonts/Mantra-Alt.ttf);
+}
+
+* {
+    margin: 1rem;
+    padding: 0;
+    font-family: Mantra;
+    
+}
+
+.nav {
+    display: flex;
+    font-size: 2em;
+    margin-bottom: 200px;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    
+}
+
+.month {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    margin: 5rem;
+    margin-bottom: 400px;
+    
+}
+
+.shadow {
+    position: absolute;
+    width: 75%;
+    padding-top:75%;
+    align-self: center;  
+    background: peachpuff;
+    margin-left: -10%;
+
+}
+
+.right {
+    background-color: #69bf64;
+}
+
+.cover-img {
+    position: absolute;
+    width: 75%;
+    padding-top:75%;
+    background: url("https://ella-2020.s3-us-west-2.amazonaws.com/IMG_0001.jpg") no-repeat center center;
+    margin-top: 5%;
+    
+}
+
+.child {
+    margin-left: -10%;
+}
+
+.month-text {
+    position: absolute;
+    font-size: 3em;
+    align-self: flex-end;
+}
+
